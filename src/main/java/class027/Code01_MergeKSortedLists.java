@@ -1,14 +1,25 @@
-package class026;
+package class027;
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class MergeKSortedLists {
+public class Code01_MergeKSortedLists {
 
     public static class ListNode {
         public int val;
         public ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+
+
     }
 
     public static void main(String[] args) {
@@ -25,7 +36,7 @@ public class MergeKSortedLists {
             return null;
         }
 
-        var h = new ListNode();
+        var h = new ListNode(0);
         var cur = h;
         while (!priorityQueue.isEmpty()) {
             cur.next = priorityQueue.poll();
